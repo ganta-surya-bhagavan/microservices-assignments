@@ -20,7 +20,7 @@ public class CartServiceImpl implements CartService {
 	@Override
 	public List<Product> addToCart(CartItem item) {
 		cartDao.save(item);
-		List<Product> productList = restTemplate.getForObject("http://products-service/"+item.getCategory(),List.class); 
+		List<Product> productList = restTemplate.getForObject("http://localhost:8082/"+item.getCategory(),List.class); 
 		return productList;
 	}
 	

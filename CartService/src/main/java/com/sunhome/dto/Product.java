@@ -1,6 +1,4 @@
 package com.sunhome.dto;
-
-import javax.persistence.Entity;
 public class Product {
 	int productId;
 	String productName;
@@ -41,6 +39,13 @@ public class Product {
 		this.price = price;
 		this.category = category;
 	}
+	public Product(int productId, String productName,String category) {
+		super();
+		this.productId = productId;
+		this.productName = productName;
+		this.category=category;
+	}
+	
 	
 }
 	
